@@ -2,11 +2,11 @@ module.exports = function(sequelize, DataTypes) {
   var Seller = sequelize.define("Seller", {
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     category: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     show: {
       type: DataTypes.BOOLEAN,
@@ -26,23 +26,23 @@ module.exports = function(sequelize, DataTypes) {
     },
     productTitle: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     price: {  
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     }, 
     condition: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     linkToImage: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: false
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: false
     }
   });
 
