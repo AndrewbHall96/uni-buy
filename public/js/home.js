@@ -3,7 +3,6 @@ $(".dropdown").on("click", function(event) {
     var update = {
         show: true
       };
-      // how to change all other to false
     $.ajax("/api/items/" + category, {
       type: "PUT",
       data: update
@@ -15,8 +14,17 @@ $(".dropdown").on("click", function(event) {
     );
   });
 
+  //routes
+
   app.put('/api/items/:category', function(req, res) {
-  
+       db.Post.update(
+        {
+            where: {
+              show: true
+            }
+            
+          }
+    )
     db.Post.update(req.body,
         {
           where: {
@@ -49,7 +57,7 @@ $(".dropdown").on("click", function(event) {
             type: "GET",
           }).then(
             function() {
-                window.location.replace("/newItem");
+                window.location.replace("/buyItem");
             }
           );
         
