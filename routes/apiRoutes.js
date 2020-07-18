@@ -15,6 +15,16 @@ module.exports = function(app) {
     db.Seller.create(req.body).then(dbSellers => {
       res.json(dbSellers);
     })
+    .catch(err => {
+      console.log("Failed to create new item");
+      res.sendStatus(500);
+    })
+  });
+
+  app.get("/api/items/:id", function(req, res) {
+    db.Seller.findAll({ where: { id: req.params.id } }).then(function(dbSellers) {
+      res.json(dbSellers);
+    });
   });
 
   // Delete an example by id
