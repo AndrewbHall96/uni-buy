@@ -1,3 +1,29 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+
+.mainCard {
+  /* display: flex;
+  justify-content: space-around !important; */
+  margin-top: 20px !important;
+  margin-left: 40% !important;
+  margin-right: 20% !important;
+  text-align: center !important;
+  /* opacity: 90%; */
+}
+
+.row {
+  align-content: center !important;
+}
+/* .onTop {
+  z-index: 5;
+} */
+
+.margIndex {
+  margin-left: 30% !important;
+  margin-right: 30% !important;
+  margin-top: 20px !important;
+  text-align: center !important;
+}
