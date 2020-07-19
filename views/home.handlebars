@@ -1,0 +1,190 @@
+<header>
+	<nav>
+		<div class="nav-wrapper topNav">
+			<a href="test.html" class="brand-logo center pink">Uni-Buy</a>
+			<ul id="nav-mobile" class="right ">
+				<li><a href="test3.html"> <i class="large material-icons add">add</i></a></li>
+				<!-- <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li> -->
+			</ul>
+		</div>
+	</nav>
+
+
+
+	<!-- <nav> navbar content here  </nav>
+
+ <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+
+
+	<ul class="sidenav sidenav-fixed">
+		<br>
+		<br>
+		<h3 id="noHide">Categories</h3>
+
+
+		<!-- <button class="change-burger" data-id="{{id}}">
+                I ate it
+            </button> -->
+
+
+		<li class="bold"><button class="linen waves-effect waves-teal" data-category="bikes">
+				Bikes
+			</button></li>
+
+		<li class="bold"><button class="linen waves-effect waves-teal" data-category="food">
+				Food
+			</button></li>
+
+		<li class="bold"><button class="linen waves-effect waves-teal" data-category="furniture">
+				Furniture
+			</button></li>
+
+		<li class="bold"><button class="linen waves-effect waves-teal" data-category="household">
+				Household
+			</button></li>
+
+		<li class="bold"><button class="linen waves-effect waves-teal" data-category="other">
+				Other
+			</button></li>
+
+
+		<li class="bold"><button class="linen waves-effect waves-teal" data-category="schoolSupplies">
+				School Supplies
+			</button></li>
+
+
+
+
+		<!-- 
+            <li class="bold"><a href="about.html" class="linen waves-effect waves-teal">Books</a></li>
+            <li class="bold"><a href="about.html" class="linen waves-effect waves-teal">Food</a></li>
+            <li class="bold"><a href="about.html" class="linen waves-effect waves-teal">Furniture</a></li>
+            <li class="bold"><a href="about.html" class="linen waves-effect waves-teal">Household</a></li>
+            <li class="bold"><a href="about.html" class="linen waves-effect waves-teal">Other</a></li>
+            <li class="bold"><a href="about.html" class="linen waves-effect waves-teal">School Supplies</a></li> -->
+	</ul>
+
+
+
+
+
+
+</header>
+
+<main class="container">
+
+	<div class="card mainCard">
+		<div class="row">
+			{{#each Post}}
+			<div class="col s12 m6 l4">
+				<div class="card darken-1 cd">
+					<div class="card-content white-text">
+
+						{{#if show}}
+						{{> item/oneItem}}
+						{{/if}}
+
+						{{!-- <span class="card-title">Card Title</span>
+						<p>I am a very simple card. I am good at containing small bits of information.
+							I am convenient because I require little markup to use effectively.</p>
+						</div>
+						<div class="card-action">
+						<a href="#">This is a link</a>
+						<a href="#">This is a link</a> --}}
+					</div>
+				</div>
+			</div>
+			{{/each}}
+
+			{{!-- <div class="col s12 m6 l4">
+                    <div class="card darken-1 cd">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="card darken-1 cd">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col s12 m6 l4">
+                    <div class="card darken-1 cd">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="card darken-1 cd">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="card darken-1 cd">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div> --}}
+		</div>
+	</div>
+
+
+</main>
+
+{{!-- Add script tags for js and jquery here --}}
