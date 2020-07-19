@@ -5,21 +5,25 @@
 
 
 .mainCard {
+  /* z-index: 5 !important; */
   /* display: flex;
   justify-content: space-around !important; */
+    /* margin-top: 8em !important; */
   margin-top: 20px !important;
-  margin-left: 40% !important;
+  /* margin-bottom: 50px !important; */
+  margin-bottom: auto !important;
+  margin-left: 20% !important;
   margin-right: 20% !important;
   text-align: center !important;
+  background-color: #f4ece7 !important;
+  /* max-height: 90px; */
+
   /* opacity: 90%; */
 }
 
 .row {
   align-content: center !important;
 }
-/* .onTop {
-  z-index: 5;
-} */
 
 .margIndex {
   margin-left: 30% !important;
@@ -30,4 +34,53 @@
 
 #noHide {
   text-align: center;
+}
+
+body {
+  /* background-color: aqua; */
+  background-image: url(https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; 
+}
+
+.sidenav {
+  background-color: #f695ab !important;
+  color: #ffd022;
+  z-index: 0 !important;
+}
+
+.topNav {
+  background-color: #f4ece7 !important;
+}
+
+.pink {
+  color:  #f695ab !important;
+}
+
+a.brand-logo.center.pink {
+  background-color:  #f4ece7 !important;
+}
+
+.linen {
+  /* align-content: center !important; */
+  background-color: black !important;
+  color: #f4ece7 !important;
+  text-align: center;
+  font-weight: 700 !important;
+  font-size: larger !important;
+} 
+
+/* button {
+  justify-content: center !important;
+} */
+
+.add {
+  color: #f695ab !important;
+}
+
+.cd {
+  max-height: 50% !important;
+  background-color: #1eacbb !important;
+  color: black !important;
 }
