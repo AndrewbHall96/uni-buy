@@ -37,17 +37,22 @@ module.exports = function (app) {
 
   app.put('/api/items/:category', function (req, res) {
     db.Seller.update({ show: false },
-      {}).then(function () {
-        db.Post.update({ show: true },
-          {
-            where: {
-              category: req.perams.category
-            }
-          })
-          .then(function (event) {
-            res.json(event);
-          });
-      })
+      {
+        where: {
+          show: true
+        }
+      }
+    ).then(function () {
+      db.Seller.update({ show: true },
+        {
+          where: {
+            category: req.params.category
+          }
+        })
+        .then(function (event) {
+          res.json(event);
+        });
+    })
   });
 
 

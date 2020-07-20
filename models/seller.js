@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Seller = sequelize.define("Seller", {
     firstName: {
       type: DataTypes.STRING,
@@ -28,11 +28,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    price: {  
+    price: {
       type: DataTypes.STRING,
       allowNull: false
-    }, 
-    condition: {
+    },
+    conditionName: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -43,9 +43,7 @@ module.exports = function(sequelize, DataTypes) {
     description: {
       type: DataTypes.TEXT,
       allowNull: false
-    },
-    created_at:  DataTypes.DATE
-    
+    }
   });
 
   return Seller;
