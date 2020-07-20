@@ -43,7 +43,9 @@ module.exports = function(sequelize, DataTypes) {
     description: {
       type: DataTypes.TEXT,
       allowNull: false
-    }
+    },
+    created_at:  DataTypes.DATE
+    
   });
 
   return Seller;

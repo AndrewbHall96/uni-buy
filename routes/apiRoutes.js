@@ -34,3 +34,44 @@ module.exports = function(app) {
     });
   });
 };
+
+// Home page
+
+app.put('/api/items/:category', function (req, res) {
+  db.Post.update({ show: false },
+    {}).then(function () {
+      db.Post.update({ show: true },
+        {
+          where: {
+            category: req.perams.category
+          }
+        })
+        .then(function (event) {
+          res.json(event);
+        });
+    })
+});
+
+app.get("/", function (req, res) {
+  db.Post.findAll({
+    where: {
+      show: true
+    }
+  }).then(function (Post) {
+    res.render("/home", Post);
+  });
+});
+
+app.get('/api/buy/:id', function (req, res) {
+
+  db.Post.findOne({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(function (Posts) {
+      res.render("buyItem", Posts);
+    });
+});
+
+//HomePage

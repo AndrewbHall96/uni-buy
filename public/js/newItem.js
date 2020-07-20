@@ -14,7 +14,7 @@ $("#add-item").on("click", function(event) {
     };
   
     // send an AJAX POST-request with jQuery
-    $.post("/api/new", newCharacter)
+    $.post("/api/new", newItem)
       // on success, run this callback
       .then(function(data) {
         // log the data we found
