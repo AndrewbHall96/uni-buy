@@ -33,12 +33,12 @@ module.exports = function(app) {
       res.json(dbSellers);
     });
   });
-};
+
 
 // Home page
 
 app.put('/api/items/:category', function (req, res) {
-  db.Post.update({ show: false },
+  db.Seller.update({ show: false },
     {}).then(function () {
       db.Post.update({ show: true },
         {
@@ -53,7 +53,7 @@ app.put('/api/items/:category', function (req, res) {
 });
 
 app.get("/", function (req, res) {
-  db.Post.findAll({
+  db.Seller.findAll({
     where: {
       show: true
     }
@@ -64,7 +64,7 @@ app.get("/", function (req, res) {
 
 app.get('/api/buy/:id', function (req, res) {
 
-  db.Post.findOne({
+  db.Seller.findOne({
     where: {
       id: req.params.id
     }
@@ -73,5 +73,6 @@ app.get('/api/buy/:id', function (req, res) {
       res.render("buyItem", Posts);
     });
 });
+};
 
 //HomePage
