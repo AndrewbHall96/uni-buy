@@ -42,4 +42,5 @@ $("#add-item").on("click", function(event) {
     $("#link").val("");
     $("#description").val("");
 
-  });
+});
+  

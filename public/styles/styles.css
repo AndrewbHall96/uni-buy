@@ -2,7 +2,9 @@
   line-height: 2.5;
 }
 
-
+body {
+  font-family: 'Lobster Two', cursive;
+}
 
 .mainCard {
   /* z-index: 5 !important; */
@@ -31,6 +33,8 @@
   margin-top: 20px !important;
   text-align: center !important;
 }
+
+
 
 #noHide {
   text-align: center;
@@ -84,4 +88,56 @@ a.brand-logo.center.pink {
   max-height: 50% !important;
   background-color: #1eacbb !important;
   color: black !important;
+}
+
+.item-category {
+  background-color: #1eacbb !important;
+  border: solid white 2px !important;
+  border-radius: 8px !important;
+}
+
+.cardCol {
+  background-color: #1eacbb !important;
+  border: #f695ab !important;
+}
+
+
+div.row::after {
+  color: #f4ece7;
+}
+div.card {
+  background-color: #f695ab;
+}
+
+label {
+  color: white !important;
+}
+
+label::after {
+  color: white !important;
+}
+
+.validate {
+  color: white !important;
+}
+
+#add-item {
+  background-color: #f695ab !important;
+  text-align: center !;
+}
+
+#buyBtn {
+  background-color: #f695ab !important;
+}
+
+#uniBtn {
+  background-color: #f695ab !important;
+}
+
+#left {
+  align-content: left !important;
+}
+
+span::after {
+  background-color: #f695ab !important;
 }
