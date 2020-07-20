@@ -4,20 +4,29 @@ var path = require("path");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/home.handlebars"));
+    db.Seller.findAll({
+      where: {
+        show: true
+      }
+    }).then(function (Post) {
+      res.render("home", Post);
+    });
   });
 
-  app.get("/buyItem", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/buyItem.handlebars"));
+  app.get("/buyitem", function (req, res) {
+    res.render("buyItem");
   });
 
-  app.get("/newItem", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/newItem.handlebars"));
+
+  app.get("/newitem", function (req, res) {
+    res.render("newItem");
   });
+
 
   app.get("/index", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    res.render("index");
   });
+
   // res.sendFile(path)
   // db.Example.findAll({}).then(function(dbExamples) {
   //   res.render("index", {
