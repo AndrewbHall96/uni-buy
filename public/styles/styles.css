@@ -48,6 +48,7 @@ body {
   background-color: #f695ab !important;
   color: #ffd022;
   z-index: 0 !important;
+  text-align: center !important;
 }
 
 .topNav {
