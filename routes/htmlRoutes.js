@@ -19,11 +19,19 @@ module.exports = function (app) {
     res.render("buyItem");
   });
 
+  // Testing login page
+  app.get("/login", (req, res) => {
+    res.render("login");
+  });
 
   app.get("/newitem", function (req, res) {
     res.render("newItem");
   });
 
+  //sign-up page
+  app.get("/signup", function (req, res) {
+    res.render("signup");
+  });
 
   app.get("/index", function (req, res) {
     res.render("index");
