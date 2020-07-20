@@ -1,5 +1,7 @@
 // Dependencies
 var express = require("express");
+var session = require("express-session");
+var passport = require("./config/passport");
 var exphbs = require("express-handlebars");
 require("dotenv").config();
 
@@ -16,6 +18,10 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+var Strategy = require("passport-local").Strategy;
 
 // Handlebars
 app.engine(
