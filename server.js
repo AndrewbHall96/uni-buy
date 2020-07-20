@@ -20,8 +20,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Requiring passport as we've configured it
-var passport = require("./config/passport");
-var Strategy = require("passport-local").Strategy;
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Handlebars
 app.engine(
