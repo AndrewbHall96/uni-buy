@@ -1,4 +1,6 @@
 var db = require("../models");
+// const { regexp } = require("sequelize/types/lib/operators");
+const { regexp } = require("sequelize");
 var passport = require("../config/passport");
 // var path = require("path");
 
@@ -38,11 +40,25 @@ module.exports = function (app) {
 
   // Create a new example
   app.post("/api/item", function (req, res) {
-    db.Seller.create(req.body).then(dbSellers => {
+   console.log(JSON.stringify(req.body) + ">>>>>>>>>>")
+    db.Seller.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      category: req.body.category,
+      productTitle: req.body.title,
+      price: req.body.price,
+      conditionName: req.body.condition,
+      linkToImage: req.body.link,
+      description: req.body.description
+     
+    }).then(dbSellers => {
+      console.log("success with new item")
       res.json(dbSellers);
     })
       .catch(err => {
         console.log("Failed to create new item");
+        console.log(err)
         res.sendStatus(500);
       })
   });
