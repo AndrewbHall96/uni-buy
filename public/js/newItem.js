@@ -5,13 +5,13 @@ $(function () {
     console.log($("#title").val().trim())
     var newItem = {
       // name from name input
-      firstName: $("#firstName").val().trim(),
-      // name from name input
-      lastName: $("#lastName").val().trim(),
-      // email from email input
-      email: $("#email").val().trim(),
-      // category from category input
-      category: $("#category").val().trim(),
+      // firstName: $("#firstName").val().trim(),
+      // // name from name input
+      // lastName: $("#lastName").val().trim(),
+      // // email from email input
+      // email: $("#email").val().trim(),
+      // // category from category input
+      category: $(".category").val(),
       //   title from title imput
       title: $("#title").val().trim(),
       // price from price input
@@ -26,19 +26,19 @@ $(function () {
     };
     console.log(JSON.stringify(newItem))
     // send an AJAX POST-request with jQuery
-    
+
     $.ajax("/api/item", {
       type: "POST",
       data: newItem
     }).then(function (data) {
-    
+
       console.log("khjhkhkhkhhkhkj");
       // tell the user we're adding a new item with an alert window
       alert("Adding new item...");
     }).catch(err => {
       console.log("Failed to create new item");
       console.log(err)
-  
+
     })
     // empty each input box by replacing the value with an empty string
     $("#firstName").val("");
@@ -52,8 +52,8 @@ $(function () {
     $("#description").val("");
 
   });
-  
-    })
+
+})
 
 
 
