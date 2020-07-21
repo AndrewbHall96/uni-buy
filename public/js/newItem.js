@@ -1,5 +1,5 @@
-$(function(){
-$("#add-item").on("click", function(event) {
+$(function () {
+  $("#add-item").on("click", function (event) {
     event.preventDefault();
     // make a new Item obj
     console.log($("#title").val().trim())
@@ -12,7 +12,7 @@ $("#add-item").on("click", function(event) {
       email: $("#email").val().trim(),
       // category from category input
       category: $("#category").val().trim(),
-    //   title from title imput
+      //   title from title imput
       title: $("#title").val().trim(),
       // price from price input
       price: $("#price").val().trim(),
@@ -27,19 +27,19 @@ $("#add-item").on("click", function(event) {
     console.log(JSON.stringify(newItem))
     // send an AJAX POST-request with jQuery
     
-  $.ajax("/api/item", {
-    type: "POST",
-    data:  newItem
-  }).then(function(data) {
+    $.ajax("/api/item", {
+      type: "POST",
+      data: newItem
+    }).then(function (data) {
     
-        console.log("khjhkhkhkhhkhkj");
-        // tell the user we're adding a new item with an alert window
-        alert("Adding new item...");
-      }).catch(err => {
-        console.log("Failed to create new item");
-        console.log(err)
+      console.log("khjhkhkhkhhkhkj");
+      // tell the user we're adding a new item with an alert window
+      alert("Adding new item...");
+    }).catch(err => {
+      console.log("Failed to create new item");
+      console.log(err)
   
-      })
+    })
     // empty each input box by replacing the value with an empty string
     $("#firstName").val("");
     $("#lastName").val("");
@@ -51,6 +51,6 @@ $("#add-item").on("click", function(event) {
     $("#link").val("");
     $("#description").val("");
 
+  });
   
-    })
-})
+});
