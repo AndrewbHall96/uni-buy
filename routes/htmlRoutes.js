@@ -35,6 +35,7 @@ module.exports = function (app) {
   });
 
   app.get("/newitem", function (req, res) {
+   
     res.render("newItem");
   });
 
