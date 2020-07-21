@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Cookie123",
+=======
+    "password": "qpzm1398$",
+>>>>>>> 28396bc80b1d9d74ed0ec7b4e85519ab733fa11e
     "database": "sellerInfo",
     "host": "127.0.0.1",
     "port": 3306,
