@@ -21,6 +21,8 @@ module.exports = function (app) {
   app.post("/api/signup", function (req, res) {
     console.log("inserting new user!");
     db.User.create({
+      first: req.body.first,
+      last:req.body.last,
       email: req.body.email,
       password: req.body.password
     })
@@ -42,9 +44,7 @@ module.exports = function (app) {
   app.post("/api/item", function (req, res) {
    console.log(JSON.stringify(req.body) + ">>>>>>>>>>")
     db.Seller.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
+      UserId: req.user.id,
       category: req.body.category,
       productTitle: req.body.title,
       price: req.body.price,

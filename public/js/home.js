@@ -14,17 +14,17 @@ $(".item-category").on("click", function (event) {
 
 
 
-$(".moreInfo").on("click", function (event) {
-  var id = $(this).data("id")
-  $.ajax("/api/buy/" + id, {
-    type: "GET",
-  }).then(
-    function () {
-      window.location.replace("../views/buyItem");
-    }
-  );
+// $(".moreInfo").on("click", function (event) {
+//   var id = $(this).data("id")
+//   $.ajax("/api/buy/" + id, {
+//     type: "GET",
+//   }).then(
+//     function () {
+//       window.location.replace("../buyItem");
+//     }
+//   );
 
-})
+// })
 
     //move it to the next page
 
