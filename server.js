@@ -1,11 +1,13 @@
 // Dependencies
 var express = require("express");
+var session = require("express-session");
+var passport = require("./config/passport");
 var exphbs = require("express-handlebars");
 require("dotenv").config();
 
 // Sets up the Express App
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8000;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -16,6 +18,12 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
+// Requiring passport as we've configured it
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Handlebars
 app.engine(

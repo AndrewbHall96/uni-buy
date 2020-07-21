@@ -1,4 +1,7 @@
 var db = require("../models");
+// const { regexp } = require("sequelize/types/lib/operators");
+const { regexp } = require("sequelize");
+var passport = require("../config/passport");
 // var path = require("path");
 
 
@@ -10,13 +13,52 @@ module.exports = function (app) {
     });
   });
 
+  // login route for passport
+  app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    res.json(req.user);
+  });
+
+  app.post("/api/signup", function (req, res) {
+    console.log("inserting new user!");
+    db.User.create({
+      email: req.body.email,
+      password: req.body.password
+    })
+      .then(function () {
+        res.redirect(307, "/api/login");
+      })
+      .catch(function (err) {
+        res.status(401).json(err);
+      });
+  });
+
+  // Route for logging user out
+  app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+  });
+
   // Create a new example
   app.post("/api/item", function (req, res) {
-    db.Seller.create(req.body).then(dbSellers => {
+   console.log(JSON.stringify(req.body) + ">>>>>>>>>>")
+    db.Seller.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      category: req.body.category,
+      productTitle: req.body.title,
+      price: req.body.price,
+      conditionName: req.body.condition,
+      linkToImage: req.body.link,
+      description: req.body.description
+     
+    }).then(dbSellers => {
+      console.log("success with new item")
       res.json(dbSellers);
     })
       .catch(err => {
         console.log("Failed to create new item");
+        console.log(err)
         res.sendStatus(500);
       })
   });
@@ -68,5 +110,3 @@ module.exports = function (app) {
       });
   });
 };
-
-
