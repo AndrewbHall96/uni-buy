@@ -15,8 +15,18 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/buyitem", function (req, res) {
-    res.render("buyItem");
+  app.get('/buyItem/:id', function (req, res) {
+
+    db.Seller.findOne({
+      where: {
+        id: req.params.id
+      }, 
+      raw: true
+    })
+      .then(function (Posts) {
+        
+        res.render("buyItem", Posts);
+      });
   });
 
   // Testing login page
