@@ -1,4 +1,5 @@
 var db = require("../models");
+const { regexp } = require("sequelize/types/lib/operators");
 // var path = require("path");
 
 
@@ -12,7 +13,19 @@ module.exports = function (app) {
 
   // Create a new example
   app.post("/api/item", function (req, res) {
-    db.Seller.create(req.body).then(dbSellers => {
+   console.log(req.body + ">>>>>>>>>>")
+    db.Seller.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      category: req.body.category,
+      title: req.body.title,
+      price: req.body.price,
+      condition: req.body.condition,
+      link: req.body.link,
+      description: req.body.description
+     
+    }).then(dbSellers => {
       res.json(dbSellers);
     })
       .catch(err => {

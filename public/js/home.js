@@ -4,7 +4,7 @@ $(".item-category").on("click", function (event) {
     type: "PUT"
   }).then(
     function () {
-      console.log("changed eaten", newEat);
+      console.log("item chosen");
       location.reload();
     }
   );
@@ -20,7 +20,7 @@ $(".moreInfo").on("click", function (event) {
     type: "GET",
   }).then(
     function () {
-      window.location.replace("/buyItem");
+      window.location.replace("../views/buyItem");
     }
   );
 
