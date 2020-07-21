@@ -38,6 +38,13 @@ body {
   margin-left: 10% !important;
   margin-right: 10% !important;
   margin-top: 20px !important;
+  /* text-align: center !important; */
+}
+
+.margIndex3 {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  margin-top: 20px !important;
   text-align: center !important;
 }
 
@@ -58,7 +65,7 @@ body {
 .sidenav {
   background-color: #f695ab !important;
   color: #ffd022;
-  z-index: 0 !important;
+  /* z-index: 1 !important; */
   text-align: center !important;
 }
 
@@ -141,10 +148,26 @@ label::after {
   background-color: #f695ab !important;
 }
 
+.btnClr {
+  background-color: #f695ab !important;
+}
+
 #left {
   align-content: left !important;
 }
 
 span::after {
   background-color: #f695ab !important;
+}
+
+#leftAlign {
+  text-align: left !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+#fontMatch {
+  font-size: 14px;
 }
