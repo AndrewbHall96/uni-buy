@@ -20,7 +20,7 @@ $(".moreInfo").on("click", function (event) {
     type: "GET",
   }).then(
     function () {
-      window.location.replace("../views/buyItem");
+      window.location.replace("buyItem");
     }
   );
 
