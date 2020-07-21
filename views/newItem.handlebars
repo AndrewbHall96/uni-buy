@@ -8,42 +8,19 @@
 							<form class="create col s12">
 								<div class="row">
 									<span class="card-title">Sell Item</span>
-									{{!-- <div class="input-field col s6">
-										<input id="firstName" type="text" class="validate">
-										<label for="firstName">First Name</label>
-									</div>
-									<div class="input-field col s6">
-										<input id="lastName" type="text" class="validate">
-										<label for="lastName">Last Name</label>
-									</div>
-									<div class="input-field col s12">
-										<input id="email" type="text" class="validate">
-										<label for="email">Email</label>
-									</div> --}}
-									<div class="input-field col s12">
-										<input id="category" type="text" class="validate">
-										<label for="category">Product Category</label>
-									</div>
-
-
 									<div class="input-field">
 										<label id="fontMatch" for="category">Product Category</label>
 										<br>
 										<br>
-										<select id="dropdown" class="validate white-text" id="category">
+										<select id="dropdown" class="category validate white-text" id="category">
 											<option value="" disabled selected>Choose your option</option>
-											<option><a href="#">Bikes<span class="badge"></a></option>
-											<option><a href="#!">Food<span></a></option>
-											<option><a href="#">Furniture</a></option>
-											<option><a href="#">Household</a></option>
-											<option><a href="#">Other</a></option>
-											<option><a href="#">School Suppoptiones</a></option>
-											<option><a href="#">Outbox<span class="badge"></a></option>
+											<option value="bikes"><a href="#">Bikes<span class="badge"></a></option>
+											<option value="food"><a href="#!">Food<span></a></option>
+											<option value="furniture"><a href="#">Furniture</a></option>
+											<option value="household"><a href="#">Household</a></option>
+											<option value="other"><a href="#">Other</a></option>
+											<option value="schoolSupplies"><a href="#">School Supplies</a></option>
 										</select>
-										<br>
-										<br>
-										{{!-- <a class="btn dropdown-trigger btnClr" href="#" data-target="dropdown">Category
-											<i class="mdi-navigation-arrow-drop-down right"></i></a> --}}
 									</div>
 									<div class="input-field col s12">
 										<input id="title" type="text" class="validate">
