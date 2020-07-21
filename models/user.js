@@ -5,11 +5,11 @@ module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     first: {
       type: DataTypes.STRING,
-      allowNull: false
+      // allowNull: false
     },
     last: {
       type: DataTypes.STRING,
-      allowNull: false
+      // allowNull: false
     },
     // The email cannot be null, and must be a proper email before creation
     email: {
@@ -26,14 +26,6 @@ module.exports = function(sequelize, DataTypes) {
 
       type: DataTypes.STRING,
       allowNull: false
-    },
-    firstName: {
-      type: DataTypes.STRING,
-      
-    },
-    lastName: {
-      type: DataTypes.STRING,
-      
     }
 
   });

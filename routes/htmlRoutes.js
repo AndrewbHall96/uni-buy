@@ -17,14 +17,16 @@ module.exports = function (app) {
 
   app.get('/buyItem/:id', function (req, res) {
 
+
     db.Seller.findOne({
       where: {
         id: req.params.id
       }, 
+      include: [db.User],
       raw: true
     })
       .then(function (Posts) {
-        
+        console.log(JSON.stringify(Posts))
         res.render("buyItem", Posts);
       });
   });
