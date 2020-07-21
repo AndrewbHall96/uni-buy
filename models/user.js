@@ -3,6 +3,14 @@ var bcrypt = require("bcryptjs");
 // takes in our function, passes in sequelize, which means we can use it without requiring it. "Sequilize gives us access to the define function(user)"
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
+    first: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    last: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     // The email cannot be null, and must be a proper email before creation
     email: {
       // gives us access to our data type.
