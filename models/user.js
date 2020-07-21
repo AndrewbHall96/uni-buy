@@ -21,11 +21,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false
+      
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false
+      
     }
 
   });
@@ -38,6 +38,12 @@ module.exports = function(sequelize, DataTypes) {
   User.addHook("beforeCreate", function(user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
-
+  User.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    User.hasMany(models.Seller, {
+      onDelete: "cascade"
+    });
+  };
   return User;
 };
