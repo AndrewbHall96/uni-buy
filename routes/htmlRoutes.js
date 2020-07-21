@@ -24,7 +24,7 @@ module.exports = function (app) {
       raw: true
     })
       .then(function (Posts) {
-        console.log(Posts)
+        
         res.render("buyItem", Posts);
       });
   });
