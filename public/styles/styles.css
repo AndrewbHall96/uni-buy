@@ -31,6 +31,7 @@ body {
   margin-left: 30% !important;
   margin-right: 30% !important;
   margin-top: 20px !important;
+  margin-bottom: 200px !important;
   text-align: center !important;
 }
 
@@ -38,6 +39,7 @@ body {
   margin-left: 10% !important;
   margin-right: 10% !important;
   margin-top: 20px !important;
+  margin-bottom: 200px !important;
   /* text-align: center !important; */
 }
 
@@ -183,4 +185,32 @@ span::after {
 input {
   color: white !important;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+    
+
+footer {
+  z-index: 100;
+  background-color: #f4ece7 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px
+}
+
+.foot{
+  text-align: center;
+  background-color: #f4ece7 !important;
+}
+
+.blue {
+  color:  #1eacbb !important;
 }
