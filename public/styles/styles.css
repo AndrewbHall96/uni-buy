@@ -211,6 +211,7 @@ footer {
   background-color: #f4ece7 !important;
 }
 
-.blue {
+p.blue {
   color:  #1eacbb !important;
+  background-color:  #f4ece7 !important;;
 }
