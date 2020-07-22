@@ -78,6 +78,11 @@ body {
 
 .pink {
   color:  #f695ab !important;
+  background-color: #1eacbb !important;
+}
+
+a.pink {
+  background: #1eacbb !important;
 }
 
 a.brand-logo.center.pink {
