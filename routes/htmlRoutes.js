@@ -11,7 +11,7 @@ module.exports = function (app) {
       raw: true
     }).then(function (Post) {
       console.log(Post);
-      res.render("home", { listing: Post });
+      res.render("signup", { listing: Post });
     });
   });
 
