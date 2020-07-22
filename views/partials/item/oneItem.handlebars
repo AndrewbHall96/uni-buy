@@ -1,6 +1,6 @@
 
 
-  
+   {{#if college: {{college}}}}
     <div class="card-content white-text">
         <span class="card-title">{{productTitle}}</span>
         <p class="price">${{price}}</p>
@@ -12,5 +12,5 @@
         <a href="/buyItem/{{id}}"> <button class="moreInfo" data-id="{{ id }}"> More Info </button>
         </a>
     </div>
-  
+    {{/if}}
 
