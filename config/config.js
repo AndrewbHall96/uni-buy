@@ -3,8 +3,7 @@ require("dotenv").config();
 module.exports = {
   "development": {
     "username": "root",
-    "password": "alreicha",
-    //process.env.MY_SQL,
+    "password": "Cookie123",
     "database": "sellerInfo",
     "host": "127.0.0.1",
     "port": 3306,
