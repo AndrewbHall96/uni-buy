@@ -1,10 +1,10 @@
 
 
-   {{!-- {{#if College: upenn}} --}}
+  
     <div class="card-content white-text">
         <span class="card-title">{{productTitle}}</span>
         <p class="price">${{price}}</p>
-        <p class="price">{{createdAt}}</p>
+        <p class="price">{{time createdAt}}</p>
 
         {{!-- Add post time later if we want --}}
     </div>
@@ -12,5 +12,5 @@
         <a href="/buyItem/{{id}}"> <button class="moreInfo" data-id="{{ id }}"> More Info </button>
         </a>
     </div>
-    {{!-- {{/if}} --}}
+  
 

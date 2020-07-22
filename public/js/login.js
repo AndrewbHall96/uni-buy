@@ -18,7 +18,8 @@ console.log("the login button works")
     };
 
     if (!userData.email || !userData.password) {
-      return;
+      
+      return ;
     }
 
     // If we have an email and password we run the loginUser function and clear the form
