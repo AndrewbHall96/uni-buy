@@ -39,6 +39,11 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
+    Seller.belongsTo(models.College, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
   return Seller;
 };
