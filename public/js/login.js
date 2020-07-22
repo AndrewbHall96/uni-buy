@@ -18,8 +18,8 @@ console.log("the login button works")
     };
 
     if (!userData.email || !userData.password) {
-      console.log("failed")
-      return;
+      
+      return ;
     }
 
     // If we have an email and password we run the loginUser function and clear the form
@@ -36,12 +36,14 @@ console.log("the login button works")
       email: email,
       password: password
     })
-      .then(function() {
-        window.location.replace("/index");
+      .then(function(response) {
+        if (response) {
+        window.location.replace("/home");
+      } else {alert("error")}
         // If there's an error, log the error
       })
       .catch(function(err) {
-        console.log(err);
+        alert("The username or password is incorrect")
       });
   }
 });
