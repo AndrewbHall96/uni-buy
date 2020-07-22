@@ -47,8 +47,12 @@ body {
   margin-left: 10% !important;
   margin-right: 10% !important;
   margin-top: 20% !important;
-  margin-bottom: 20%;
+  margin-bottom: 200px !important;
   text-align: center !important;
+}
+
+#index {
+  margin-top: 30px !important;
 }
 
 .marg {
@@ -241,6 +245,10 @@ p.blue {
 .git:hover {
   font-weight: bolder !important;
   font-size: x-large !important;
+}
+
+#linkHov:hover {
+  color: white !important;
 }
 
 @media only screen and (max-device-width: 992px) {
