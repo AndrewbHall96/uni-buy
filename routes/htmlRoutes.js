@@ -3,7 +3,7 @@ var path = require("path");
 
 module.exports = function (app) {
   // Load index page
-  app.get("/", function (req, res) {
+  app.get("/home", function (req, res) {
     db.Seller.findAll({
       where: {
         show: true
@@ -11,9 +11,10 @@ module.exports = function (app) {
       raw: true
     }).then(function (Post) {
       console.log(Post);
-      res.render("signup", { listing: Post });
+      res.render("home", { listing: Post });
     });
   });
+  
 
   app.get('/buyItem/:id', function (req, res) {
 
@@ -32,7 +33,7 @@ module.exports = function (app) {
   });
 
   // Testing login page
-  app.get("/login", (req, res) => {
+  app.get("/", (req, res) => {
     res.render("login");
   });
 

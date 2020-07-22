@@ -1,5 +1,6 @@
 var value;
 $("#dropdown").on("click", function (event) {
+  console.log("button works")
     value = $(this).val()
     exportIt()
   })
@@ -8,5 +9,5 @@ $("#dropdown").on("click", function (event) {
   const getCollege = () => {
     return value;
   };
-  exports.getCollege = getCollege;
+  module.exports = getCollege
 }
