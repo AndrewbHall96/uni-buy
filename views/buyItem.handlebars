@@ -12,13 +12,13 @@
 						<p>Description: {{description}}</p>
 						<br>
 						<p>Seller Name: {{"User.first"}} {{"User.last"}}</p>
-						<p>Upload Date: {{createdAt}}</p>
+						<p>Upload Date: {{time createdAt}}</p>
 						
 						
 					</div>
 					<br>
 					<br>
-					<a id="emailBtn" data-id="{{ id }}" class="waves-effect waves-light white black-text btn" href="mailto:{{"User.email"}}?
+					<a  id="emailBtn" data-id="{{ id }}" class="waves-effect waves-light white black-text btn" href="mailto:{{"User.email"}}?
 					&subject=Uni-Buy: Someone wants to purchase one of your items!
 					&body=Dear {{"User.first"}} {{"User.last"}},%0D%0A%0D%0AI'm interested in purchasing your {{productTitle}}.">Email Buyer to Purchase</a>
 					<br>
