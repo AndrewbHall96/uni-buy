@@ -18,6 +18,7 @@ console.log("the login button works")
     };
 
     if (!userData.email || !userData.password) {
+      console.log("failed")
       return;
     }
 
