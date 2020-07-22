@@ -70,12 +70,13 @@ body {
 .sidenav {
   background-color: #f695ab !important;
   color: #ffd022;
-  /* z-index: 1 !important; */
+  /* z-index: 0 !important; */
   text-align: center !important;
 }
 
 .topNav {
   background-color: #f4ece7 !important;
+  z-index: 1000 !important;
 }
 
 .pink {
@@ -200,7 +201,7 @@ main {
     
 
 footer {
-  z-index: 100;
+  z-index: 1000;
   background-color: #f4ece7 !important;
   padding-top: 0px !important;
   padding-bottom: 0px
@@ -214,4 +215,10 @@ footer {
 p.blue {
   color:  #1eacbb !important;
   background-color:  #f4ece7 !important;;
+}
+
+@media only screen and (max-device-width: 992px) {
+  .sidenav {
+    z-index: 3000 !important;
+  }
 }
