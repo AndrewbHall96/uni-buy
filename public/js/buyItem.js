@@ -5,7 +5,7 @@ $("#emailBtn").on("click", function (event) {
       }).then(
         function () {
           console.log("item bought and removed");
-          location.reload();
+          location.href = "/home/" + localStorage.getItem("college")
         }
       );
 })

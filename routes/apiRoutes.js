@@ -46,6 +46,7 @@ module.exports = function (app) {
   app.post("/api/item", function (req, res) {
    console.log(JSON.stringify(req.body) + ">>>>>>>>>>")
     db.Seller.create({
+      college: req.body.college,
       UserId: req.user.id,
       category: req.body.category,
       productTitle: req.body.title,
@@ -79,25 +80,7 @@ module.exports = function (app) {
   });
 
 
-  app.put('/api/items/:category', function (req, res) {
-    db.Seller.update({ show: false },
-      {
-        where: {
-          show: true
-        }
-      }
-    ).then(function () {
-      db.Seller.update({ show: true },
-        {
-          where: {
-            category: req.params.category
-          }
-        })
-        .then(function (event) {
-          res.json(event);
-        });
-    })
-  });
+  
 
 
   app.get('/api/buy/:id', function (req, res) {

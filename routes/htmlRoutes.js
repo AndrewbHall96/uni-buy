@@ -1,18 +1,43 @@
 var db = require("../models");
 var path = require("path");
 
+
 module.exports = function (app) {
-  // Load index page
-  app.get("/home", function (req, res) {
+ 
+  app.get("/home/:college", function (req, res) {
     db.Seller.findAll({
       where: {
-        show: true
+         college: req.params.college
       },
       raw: true
     }).then(function (Post) {
       console.log(Post);
       res.render("home", { listing: Post });
+     
     });
+  });
+
+  app.get('/home/:college/:category', function (req, res) {
+    // db.Seller.update({ show: false },
+    //   {
+    //     where: {
+    //       show: true
+    //     }
+    //   }
+    // ).then(function () {
+      db.Seller.findAll(
+        {
+          where: {
+            category: req.params.category,
+            college: req.params.college
+          }, 
+          raw: true
+        })
+        .then(function (event) {
+          console.log(event)
+          res.render("home", { listing: event });
+        });
+    // })
   });
   
 

@@ -42,6 +42,7 @@ hbs.handlebars.registerHelper('time', function (createdAt) {
   return (createdAt.getMonth() + 1) + "/" + createdAt.getDate() + "/"  + createdAt.getFullYear()
 })
 
+
 // Routes - more names to come 
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);

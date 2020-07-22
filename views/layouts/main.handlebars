@@ -34,7 +34,7 @@
 			</ul>
 			<nav>
 				<div class="nav-wrapper topNav">
-					<a href="/home" class="brand-logo center pink">Uni-Buy</a>
+					<a href="/home" id = "logo" class="brand-logo center pink">Uni-Buy</a>
 					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right">
 						<li><a href="/newItem"> <i class="large material-icons icons">add</i></a></li>
@@ -62,7 +62,10 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col s3">
+			<div class="col s2">
+				<p class="blue">Creators:</p>
+			</div>
+			<div class="col s2">
 				<a href="https://github.com/asharma1398" target="_blank">
 					<p>
 						<i class="fa fa-github" aria-hidden="true"></i>
@@ -70,7 +73,7 @@
 					</p>
 				</a>
 			</div>
-			<div class="col s3">
+			<div class="col s2">
 				<a href="https://github.com/alreichard" target="_blank">
 					<p>
 						<i class="fa fa-github" aria-hidden="true"></i>
@@ -78,7 +81,7 @@
 					</p>
 				</a>
 			</div>
-			<div class="col s3">
+			<div class="col s2">
 				<a href="https://github.com/AndrewbHall96" target="_blank">
 					<p>
 						<i class="fa fa-github" aria-hidden="true"></i>
@@ -86,7 +89,7 @@
 					</p>
 				</a>
 			</div>
-			<div class="col s3">
+			<div class="col s2">
 				<a href="https://github.com/Gary-Bergman/" target="_blank">
 					<p>
 						<i class="fa fa-github" aria-hidden="true"></i>
@@ -94,14 +97,14 @@
 					</p>
 				</a>
 			</div>
-			{{!-- <div class="footer-copyright col s12 foot">
+			<div class="footer-copyright col s2 foot">
 
-					<div >
-						<p class="blue">© Copyright 2020</p>
-					</div>
+				<div>
+					<p class="blue">© Copyright 2020</p>
+				</div>
 
 
-			</div> --}}
+			</div>
 		</div>
 	</div>
 
@@ -113,7 +116,16 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		var elems = document.querySelectorAll('.sidenav');
 		var instances = M.Sidenav.init(elems, {});
+
 	});
+	$(document).ready(function(){
+
+	
+	var localCollege = localStorage.getItem("college")
+	$("#logo").attr("href", "/home/" + localCollege)
+
+	})
+
 </script>
 
 {{!-- Connect to top nav dropdown --}}
