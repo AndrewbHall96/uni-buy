@@ -27,6 +27,10 @@ $(document).ready(function() {
     emailInput.val("");
     passwordInput.val("");
   });
+  
+  // signUpForm.on("login", function(event){
+  //   window.location.replace("/login");
+  // });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
