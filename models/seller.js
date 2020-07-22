@@ -29,6 +29,10 @@ module.exports = function (sequelize, DataTypes) {
     description: {
       type: DataTypes.TEXT,
       allowNull: false
+    },
+    college: {
+      type: DataTypes.TEXT,
+      allowNull: false
     }
   });
   Seller.associate = function(models) {
@@ -39,11 +43,11 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
-    Seller.belongsTo(models.College, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    // Seller.belongsTo(models.College, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
   };
   return Seller;
 };
