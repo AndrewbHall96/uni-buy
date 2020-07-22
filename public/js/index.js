@@ -1,1 +1,1 @@
-var collegeName = $("").attr("data-id");
+var collegeName = $("").attr("data-id");   

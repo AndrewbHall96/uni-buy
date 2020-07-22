@@ -1,6 +1,6 @@
 $(".item-category").on("click", function (event) {
   var category = $(this).data("category");
-  $.ajax("/api/signup/" + category, {
+  $.ajax("/api/items/" + category, {
     type: "PUT"
   }).then(
     function () {
