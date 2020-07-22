@@ -1,19 +1,23 @@
 var db = require("../models");
 var path = require("path");
 
+
 module.exports = function (app) {
-  // Load index page
-  app.get("/home", function (req, res) {
+ 
+  app.get("/home/:college", function (req, res) {
     db.Seller.findAll({
       where: {
-        show: true
+         college: req.params.college
       },
       raw: true
     }).then(function (Post) {
       console.log(Post);
       res.render("home", { listing: Post });
+     
     });
   });
+
+  
   
 
   app.get('/buyItem/:id', function (req, res) {
