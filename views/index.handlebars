@@ -1,7 +1,5 @@
-
-
 <main class="container">
-	<div class="card margIndex2">
+	<div class="card margIndex3">
 		<div class="row">
 			<div class="col s12">
 				<div class="card cardCol">
@@ -10,41 +8,14 @@
 						<p>Please select your University from the drowdown list below.</p>
 					</div>
 					<div class="card-action">
-
-						<!-- Dropdown Trigger -->
-						<a class='dropdown-trigger btn' id="uniBtn" href='#' data-target='dropdown1'>University</a>
-
-						<!-- Dropdown Structure -->
-						<ul id='dropdown1' class='dropdown-content'>
-							<li><a href="#!">one</a></li>
-							<li><a href="#!">two</a></li>
-							<li class="divider" tabindex="-1"></li>
-							<li><a href="#!">three</a></li>
-							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-						</ul>
-
-						<!-- <ul id="dropdown1" class="dropdown-content" tabindex="0" style="display: block; width: 102.703px; left: 580.406px; top: 232px; height: 295px; transform-origin: 0px 0px; opacity: 1; transform: scaleX(1) scaleY(1);">
-                            <li tabindex="0">
-                              <a href="#!">one</a>
-                            </li>
-                            <li tabindex="0">
-                              <a href="#!">two</a>
-                            </li>
-                            <li class="divider" tabindex="-1"></li>
-                            <li tabindex="0">
-                              <a href="#!">three</a>
-                            </li>
-                            <li tabindex="0">
-                              <a href="#!">
-                                <i class="material-icons">view_module</i>four</a>
-                            </li>
-                            <li tabindex="0">
-                              <a href="#!">
-                                <i class="material-icons">cloud</i>five</a>
-                            </li>
-                          </ul> -->
-
+						<div>
+							<label id="fontMatch" for="university"></label>
+							<ul id="dropdown" class="validate dropdown-content" id="university">
+								<li><a href="#">Penn<span class="badge"></a></li>
+							</ul>
+							<a class="btn dropdown-trigger btnClr" href="#" data-target="dropdown">University
+								<i class="mdi-navigation-arrow-drop-down right"></i></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -53,5 +24,11 @@
 
 </main>
 
+
+<script>
+	$(document).ready(function () {
+		$(".dropdown-trigger").dropdown();
+	});
+</script>
 
 {{!-- Add script tags for js and jquery here --}}
