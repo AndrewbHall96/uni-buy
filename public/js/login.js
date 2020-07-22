@@ -38,7 +38,7 @@ console.log("the login button works")
     })
       .then(function(response) {
         if (response) {
-        window.location.replace("/home");
+        window.location.replace("/index");
       } else {alert("error")}
         // If there's an error, log the error
       })
