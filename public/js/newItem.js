@@ -1,3 +1,10 @@
+const index = require('./index');
+var whichCollege = index.getCollege();
+localStorage.setItem("college", whichCollege)
+
+
+
+
 $(function () {
   $("#add-item").on("click", function (event) {
     event.preventDefault();
@@ -11,6 +18,7 @@ $(function () {
       // // email from email input
       // email: $("#email").val().trim(),
       // // category from category input
+      college: localStorage.getItem("college"),
       category: $(".category").val(),
       //   title from title imput
       title: $("#title").val().trim(),
@@ -31,7 +39,7 @@ $(function () {
       type: "POST",
       data: newItem
     }).then(function (data) {
-
+      location.reload();
       console.log("khjhkhkhkhhkhkj");
       // tell the user we're adding a new item with an alert window
       alert("Adding new item...");
