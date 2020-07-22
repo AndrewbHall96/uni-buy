@@ -1,13 +1,10 @@
-var value;
-$("#dropdown").on("click", function (event) {
+
+$("#dropdown li").on("click", function (event) {
   console.log("button works")
-    value = $(this).val()
-    exportIt()
+    let value = $(this).data("value")
+    saveIt(value)
   })
   
-  function exportIt(){
-  const getCollege = () => {
-    return value;
-  };
-  module.exports = getCollege
-}
+  function saveIt(value){
+    localStorage.setItem("college", value)
+  }

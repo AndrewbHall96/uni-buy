@@ -1,6 +1,4 @@
-const index = require('./index');
-var whichCollege = index.getCollege();
-localStorage.setItem("college", whichCollege)
+
 
 
 
