@@ -17,7 +17,28 @@ module.exports = function (app) {
     });
   });
 
-  
+  app.get('/home/:college/:category', function (req, res) {
+    // db.Seller.update({ show: false },
+    //   {
+    //     where: {
+    //       show: true
+    //     }
+    //   }
+    // ).then(function () {
+      db.Seller.findAll(
+        {
+          where: {
+            category: req.params.category,
+            college: req.params.college
+          }, 
+          raw: true
+        })
+        .then(function (event) {
+          console.log(event)
+          res.render("home", { listing: event });
+        });
+    // })
+  });
   
 
   app.get('/buyItem/:id', function (req, res) {
