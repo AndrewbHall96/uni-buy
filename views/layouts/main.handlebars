@@ -34,7 +34,7 @@
 			</ul>
 			<nav>
 				<div class="nav-wrapper topNav">
-					<a href="/home" class="brand-logo center pink">Uni-Buy</a>
+					<a href="/home" id = "logo" class="brand-logo center pink">Uni-Buy</a>
 					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right">
 						<li><a href="/newItem"> <i class="large material-icons icons">add</i></a></li>
@@ -116,7 +116,16 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		var elems = document.querySelectorAll('.sidenav');
 		var instances = M.Sidenav.init(elems, {});
+
 	});
+	$(document).ready(function(){
+
+	
+	var localCollege = localStorage.getItem("college")
+	$("#logo").attr("href", "/home/" + localCollege)
+
+	})
+
 </script>
 
 {{!-- Connect to top nav dropdown --}}

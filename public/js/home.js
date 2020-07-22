@@ -1,14 +1,23 @@
 $(".item-category").on("click", function (event) {
   var category = $(this).data("category");
-  $.ajax("/api/items/" + category, {
-    type: "PUT"
-  }).then(
-    function () {
-      console.log("item chosen");
-      location.reload();
-    }
-  );
+  var storageLink = localStorage.getItem("college")
+  location.href = "/home/" + storageLink + "/" + category
+  // $.ajax("/api/items/" + storageLink + "/" + category, {
+  //   type: "PUT"
+  // }).then(
+  //   function () {
+  //     console.log("item chosen");
+  //     location.reload();
+  //   }
+  // );
 });
+
+// $(".item-category").on("click", function (event) {
+//   var storageLink = localStorage.getItem("college")
+//   $.ajax("/items/" + storageLink, {
+//     type: "GET"
+//   })
+// });
 
 
 
