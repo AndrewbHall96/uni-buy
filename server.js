@@ -5,6 +5,18 @@ var passport = require("./config/passport");
 var exphbs = require("express-handlebars");
 require("dotenv").config();
 
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: process.env.MY_SQL,
+    database: "sellerInfo"
+  })
+};
+
 
 // Sets up the Express App
 var app = express();
