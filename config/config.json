@@ -1,8 +1,7 @@
 {
   "development": {
     "username": "root",
-
-    "password": "alreicha",
+    "password": "Cookie123",
     "database": "sellerInfo",
     "host": "127.0.0.1",
     "port": 3306,
