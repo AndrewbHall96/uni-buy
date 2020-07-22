@@ -217,8 +217,37 @@ p.blue {
   background-color:  #f4ece7 !important;;
 }
 
+.hov {
+  font-size: larger !important;
+}
+
+.hov:hover {
+  color: #1eacbb !important;
+  font-weight: bolder !important;
+
+}
+
+.icons:hover{
+  color: #1eacbb !important;
+  font-weight: bolder !important;
+
+}
+
+.uni:hover {
+  color: #1eacbb !important;
+  font-weight: bolder !important;
+}
+
+.git:hover {
+  font-weight: bolder !important;
+  font-size: x-large !important;
+}
+
 @media only screen and (max-device-width: 992px) {
   .sidenav {
     z-index: 3000 !important;
   }
 }
+
+
+
