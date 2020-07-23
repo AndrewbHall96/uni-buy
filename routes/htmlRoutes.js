@@ -12,7 +12,7 @@ module.exports = function (app) {
       raw: true
     }).then(function (Post) {
       console.log(Post);
-      res.render("home", { listing: Post });
+      res.render("home", { listing: Post, college: req.params.college.charAt(0).toUpperCase() + req.params.college.slice(1)});
      
     });
   });

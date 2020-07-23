@@ -46,7 +46,7 @@
 									class="large material-icons icons right">expand_more</i></a></li>
 					</ul>
 					<ul class="right">
-							<li><a id="collegeTitle" class="icons hov large" >Penn</a></li>
+							<li><a id="collegeTitle" class="icons hov large" >{{college}}</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -122,7 +122,8 @@
 	
 	var localCollege = localStorage.getItem("college")
 	$("#logo").attr("href", "/home/" + localCollege)
-
+   
+	
 	})
 
 </script>
